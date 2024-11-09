@@ -1,15 +1,63 @@
-<meta property="og:type" content="website">
-<meta property="og:title" content="NumanZaidan/DarthVader's Official Website"/>
-<meta property="og:description" content="Created in 5/3/2023"/>
-<meta property="og:url" content="NumanZaidan.github.io"/>
-
 <!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="style.css">
-	</head>
-	
-	<body>
-		<b>Nothing To See Here!</b>
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Movie Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Movie Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('movies')">Movies</a></li>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="content-section">
+            <h2>Welcome to My Movie Website</h2>
+            <p>Enjoy your stay!</p>
+        </section>
+        <section id="movies" class="content-section" style="display:none;">
+            <h2>Movie Listings</h2>
+            <div class="movie">
+                <img src="movie1.jpg" alt="Movie 1">
+                <h3>Ruby Gillman : Teenage Kraken</h3>
+                <p>"Ruby Gillman, Teenage Kraken" is a 2023 American animated teen comedy film directed by Kirk DeMicco and Faryn Pearl, and written by Pam Brady, Brian C. Brown, and Elliott DiGuiseppi. It is produced by DreamWorks Animation and distributed by Universal Pictures.</p>
+                <button class="button-old" onclick="playMovie('movie1.mp4')">Watch Now</button>
+            </div>
+            <div class="movie">
+                <img src="movie2.jpg" alt="Movie 2">
+                <h3>Movie Title 2</h3>
+                <p>Some description about Movie 2.</p>
+                <button class="button-old" onclick="playMovie('movie2.mp4')">Watch Now</button>
+            </div>
+            <!-- Add more movies as needed -->
+        </section>
+        <section id="about" class="content-section" style="display:none;">
+            <h2>About Us</h2>
+            <p>Learn more about our mission and team.</p>
+        </section>
+        <section id="contact" class="content-section" style="display:none;">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for more information.</p>
+        </section>
+        <section id="player" style="display:none;">
+            <video id="videoPlayer" controls>
+                <source id="videoSource" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button class="button-old" onclick="closePlayer()">Close</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Movie Website. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>
