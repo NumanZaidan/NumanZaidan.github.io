@@ -12,7 +12,7 @@ body {
 
 main {
     flex: 1; /* Allows the main content to grow and push the footer down */
-    padding-bottom: 4rem; /* Ensure space for the fixed footer */
+    padding-bottom: 2rem; /* Ensure space for the footer */
 }
 
 /* Navigation styling */
@@ -281,7 +281,6 @@ footer {
     text-align: center;
     padding: 1rem;
     width: 100%;
-    margin-top: auto; /* Push footer to the bottom of the content */
 }
 
 /* Responsive navigation styling */
