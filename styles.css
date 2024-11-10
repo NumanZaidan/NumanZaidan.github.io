@@ -49,6 +49,26 @@ header nav ul li a:active {
     transform: translateY(2px); /* Move the button down when pressed */
 }
 
+
+/* Responsive navigation styling */
+@media (max-width: 768px) {
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+        display: block;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
 /* Fantasy button style */
 .button-old {
     background-color: #6b4226;
