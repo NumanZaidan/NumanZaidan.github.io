@@ -31,13 +31,6 @@ function closePlayer() {
     localStorage.removeItem('currentVideoSrc');
 }
 
-// Update the "Last Updated" timestamp
-function updateLastUpdated() {
-    const lastUpdatedElement = document.getElementById('lastUpdated');
-    const now = new Date();
-    const formattedDate = now.toLocaleString();
-    lastUpdatedElement.textContent = formattedDate;
-}
 
 // Check hash on page load
 window.addEventListener('load', () => {
@@ -50,8 +43,7 @@ window.addEventListener('load', () => {
         playMovie(currentVideoSrc);
     }
 
-    // Update the "Last Updated" timestamp
-    updateLastUpdated();
+    
 });
 
 // Check hash on hash change
@@ -67,6 +59,5 @@ window.addEventListener('hashchange', () => {
         }
     }
 
-    // Update the "Last Updated" timestamp
-    updateLastUpdated();
+  
 });
