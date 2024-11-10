@@ -1,37 +1,42 @@
+// Function to show a section based on the hash value
 function showSection(sectionId) {
-    window.location.hash = sectionId;
     document.querySelectorAll('.content-section').forEach(section => {
         if (section.id === sectionId) {
-            gsap.to(section, {duration: 1, autoAlpha: 1, display: 'block'});
+            section.style.display = 'block';
         } else {
-            gsap.to(section, {duration: 1, autoAlpha: 0, display: 'none'});
+            section.style.display = 'none';
         }
     });
 }
 
+// Function to play a movie
 function playMovie(videoSrc) {
-    document.querySelectorAll('.content-section').forEach(section => {
-        gsap.to(section, {duration: 1, autoAlpha: 0, display: 'none'});
-    });
     const videoPlayer = document.getElementById('videoPlayer');
     videoPlayer.src = videoSrc;
-    gsap.to('#player', {duration: 1, autoAlpha: 1, display: 'flex'});
+    document.getElementById('player').style.display = 'flex';
+    document.getElementById('movies').style.display = 'none';
+
+    // Save video state to Local Storage
+    localStorage.setItem('currentVideoSrc', videoSrc);
 }
 
+// Function to close the player
 function closePlayer() {
     const videoPlayer = document.getElementById('videoPlayer');
     videoPlayer.src = ''; // Clear the source to stop the video
-    gsap.to('#player', {duration: 1, autoAlpha: 0, display: 'none'});
+    document.getElementById('player').style.display = 'none';
     showSection('movies');
+
+    // Clear video state from Local Storage
+    localStorage.removeItem('currentVideoSrc');
 }
 
-// Check hash on page load
+// Restore video state on page load
 window.addEventListener('load', () => {
-    const hash = window.location.hash.replace('#', '') || 'home';
-    showSection(hash);
-});
-// Check hash on hash change
-window.addEventListener('hashchange', () => {
-    const hash = window.location.hash.replace('#', '');
-    showSection(hash);
+    const currentVideoSrc = localStorage.getItem('currentVideoSrc');
+    if (currentVideoSrc) {
+        playMovie(currentVideoSrc);
+    } else {
+        showSection('home');
+    }
 });
