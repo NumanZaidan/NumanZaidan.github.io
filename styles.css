@@ -177,7 +177,7 @@ footer {
 /* Hero Section */
 .hero-section {
     background: url('hero-background.jpg') no-repeat center center/cover;
-    color: #fff;
+    color: #000; /* Set text color to black */
     text-align: center;
     padding: 4rem 1rem;
     margin-bottom: 2rem;
@@ -195,7 +195,34 @@ footer {
     margin: 0 auto 2rem;
 }
 
-.button-cta,
+.button-cta {
+    background-color: #6b4226;
+    color: #ffd700;
+    border: 2px solid #4a301b;
+    padding: 10px 20px;
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px #4a301b;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.button-cta:hover {
+    background-color: #854c30;
+    box-shadow: 0 2px #4a301b;
+    transform: translateY(-2px);
+}
+
+.button-cta:active {
+    background-color: #4a301b;
+    box-shadow: 0 1px #4a301b;
+    transform: translateY(2px);
+}
+
 .button-old {
     background-color: #6b4226;
     color: #ffd700;
@@ -212,14 +239,12 @@ footer {
     margin-top: 1rem;
 }
 
-.button-cta:hover,
 .button-old:hover {
     background-color: #854c30;
     box-shadow: 0 2px #4a301b;
     transform: translateY(-2px);
 }
 
-.button-cta:active,
 .button-old:active {
     background-color: #4a301b;
     box-shadow: 0 1px #4a301b;
