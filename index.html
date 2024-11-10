@@ -19,11 +19,22 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="home" class="content-section">
-            <h2>Welcome to My Movie Website</h2>
-            <p>Enjoy your stay!</p>
-        </section>
+    <<section id="home" class="content-section">
+    <div class="hero-section">
+        <h2>Welcome to FilmNest</h2>
+        <p>Your ultimate destination for an unparalleled movie-watching experience. Explore, discover, and enjoy the magic of cinema.</p>
+        <button class="button-cta" onclick="showSection('movies')">Browse Movies</button>
+    </div>
+    <div class="featured-section">
+        <h3>Featured Movie</h3>
+        <div class="featured-movie">
+            <img src="movie1.jog" alt="Featured Movie">
+            <h4>Ruby Gillman : Teenage Kraken (Features Movie)</h4>
+            <p>Ruby Gillman, Teenage Kraken" is a 2023 American animated teen comedy film directed by Kirk DeMicco and Faryn Pearl, and written by Pam Brady, Brian C. Brown, and Elliott DiGuiseppi. It is produced by DreamWorks Animation and distributed by Universal Pictures.</p>
+            <button class="button-old" onclick="playMovie('https://www.youtube.com/embed/YOUR_VIDEO_ID')">Watch Now</button>
+        </div>
+    </div>
+</section>
         <section id="movies" class="content-section" style="display:none;">
             <h2>Movie Listings</h2>
             <div class="movie">
