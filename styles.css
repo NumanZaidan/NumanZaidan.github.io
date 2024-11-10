@@ -274,15 +274,14 @@ header nav ul li a:active {
     margin-bottom: 1rem;
 }
 
+/* Footer styling */
 footer {
     background-color: #3f2e1c;
     color: #ffd700;
     text-align: center;
     padding: 1rem;
-    position: fixed;
-    bottom: 0;
     width: 100%;
-    z-index: 1000; /* Ensures the footer is always on top */
+    margin-top: auto; /* Push footer to the bottom of the content */
 }
 
 /* Responsive navigation styling */
