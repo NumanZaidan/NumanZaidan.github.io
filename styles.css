@@ -12,6 +12,7 @@ body {
 
 main {
     flex: 1; /* Allows the main content to grow and push the footer down */
+    padding-bottom: 4rem; /* Ensure space for the fixed footer */
 }
 
 /* Navigation styling */
@@ -55,26 +56,7 @@ header nav ul li a:hover {
 header nav ul li a:active {
     background-color: #4a301b; /* Even darker when pressed */
     box-shadow: 0 1px #4a301b;
-    transform: translateY(2px); /* Move the button down when pressed */
-}
-
-/* Responsive navigation styling */
-@media (max-width: 768px) {
-    header nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul li {
-        margin: 0.5rem 0;
-        display: block;
-    }
-
-    header nav ul li a {
-        font-size: 1rem;
-        padding: 8px 16px;
-    }
+    transform: translateY(2px); /* Move the button down when pressed
 }
 
 main {
@@ -168,21 +150,9 @@ main {
 
     #videoPlayer {
         width: 100%;
-    }
+   }
 }
 
-
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
 /* Hero Section */
 .hero-section {
     background: url('hero-background.jpg') no-repeat center center/cover;
@@ -306,4 +276,34 @@ footer {
     font-size: 1rem;
     color: #666;
     margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #3f2e1c;
+    color: #ffd700;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the footer is always on top */
+}
+
+/* Responsive navigation styling */
+@media (max-width: 768px) {
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+        display: block;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
 }
