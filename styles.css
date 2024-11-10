@@ -49,7 +49,6 @@ header nav ul li a:active {
     transform: translateY(2px); /* Move the button down when pressed */
 }
 
-
 /* Responsive navigation styling */
 @media (max-width: 768px) {
     header nav ul {
@@ -68,7 +67,6 @@ header nav ul li a:active {
         padding: 8px 16px;
     }
 }
-
 /* Fantasy button style */
 .button-old {
     background-color: #6b4226;
