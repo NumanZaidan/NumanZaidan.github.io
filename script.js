@@ -1,4 +1,15 @@
+// Function to show a section based on the hash value
+function showSectionFromHash() {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+        showSection(hash);
+    } else {
+        showSection('home');
+    }
+}
+
 function showSection(sectionId) {
+    window.location.hash = sectionId;
     document.querySelectorAll('.content-section').forEach(section => {
         if (section.id === sectionId) {
             gsap.to(section, {duration: 1, autoAlpha: 1, display: 'block'});
@@ -23,3 +34,8 @@ function closePlayer() {
     gsap.to('#player', {duration: 1, autoAlpha: 0, display: 'none'});
     showSection('movies');
 }
+
+// Check hash on page load
+window.addEventListener('load', showSectionFromHash);
+// Check hash on hash change
+window.addEventListener('hashchange', showSectionFromHash);
