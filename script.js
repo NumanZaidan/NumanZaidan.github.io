@@ -1,13 +1,3 @@
-// Function to show a section based on the hash value
-function showSectionFromHash() {
-    const hash = window.location.hash.replace('#', '');
-    if (hash) {
-        showSection(hash);
-    } else {
-        showSection('home');
-    }
-}
-
 function showSection(sectionId) {
     window.location.hash = sectionId;
     document.querySelectorAll('.content-section').forEach(section => {
@@ -36,6 +26,12 @@ function closePlayer() {
 }
 
 // Check hash on page load
-window.addEventListener('load', showSectionFromHash);
+window.addEventListener('load', () => {
+    const hash = window.location.hash.replace('#', '') || 'home';
+    showSection(hash);
+});
 // Check hash on hash change
-window.addEventListener('hashchange', showSectionFromHash);
+window.addEventListener('hashchange', () => {
+    const hash = window.location.hash.replace('#', '');
+    showSection(hash);
+});
