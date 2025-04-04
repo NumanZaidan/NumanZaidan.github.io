@@ -441,7 +441,7 @@ UIAspectRatioConstraint_8.AspectRatio = 1.837
 
 function verifyied()
 	ScriptFusionXHubKeySys:Destroy()
-	loadstring(game:HttpGet("https://pastebin.com/raw/EY3cjkf4",true))()
+	loadstring(game:HttpGet("https://pastebin.com/raw/wb4S7Kvz",true))()
 end
 
 function checkpreviouskey()
