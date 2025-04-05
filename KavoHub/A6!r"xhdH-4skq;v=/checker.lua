@@ -6,4 +6,6 @@ elseif game.GameId == 7267853694 then
     warn("DEBUG | ScriptFusionX Hub Loader | Supported Game | Loading Game | Building Boats")
     loadstring(game:HttpGet("https://raw.githubusercontent.com/NumanZaidan/ScriptFusionX-Hub/refs/heads/main/ScriptFusionX%20Hub%20%7C%20Building%20Boats",true))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/NumanZaidan/ScriptFusionX-Hub/refs/heads/main/ScriptFusionX%20Hub%20%7C%20Building%20Boats",true))()
+else
+    warn("ScriptFusionX Hub Loader | Game not Supported ")
 end
